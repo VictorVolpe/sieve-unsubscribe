@@ -40,3 +40,9 @@ chown vmail:vmail /var/log/sieve-unsubscribe.log
 chmod 600 /var/log/sieve-unsubscribe.log
 service dovecot restart
 ```
+
+## Usage:
+- Create account unsubscribe@mydomain.com
+- Log in through IMAP or send a new message to it
+- Create your remote `subscribe.php` API to deal with the helper requests
+- Send a message to unsubscribe+listname@mydomain.com to trigger the sieve script
